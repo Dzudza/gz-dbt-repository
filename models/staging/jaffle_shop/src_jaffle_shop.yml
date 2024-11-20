@@ -4,4 +4,4 @@ sources:
   - name: jaffle_shop
     database: dbt-fundamentals-441508.jaffle_shop
     tables:
-      - name: raw_jaffle_shop_customers
+      - name: dbt-fundamentals-441508.jaffle_shop.raw_jaffle_shop_customers
