@@ -4,4 +4,4 @@ select
     , payment_method
     , amount/100 as amount
 
-from stripe.raw_stripe_payments
+from    {{source('stripe', 'payments')}}

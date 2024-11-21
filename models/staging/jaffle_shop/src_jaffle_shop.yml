@@ -2,6 +2,14 @@ version: 2
 
 sources:
   - name: jaffle_shop
-    database: dbt-fundamentals-441508.jaffle_shop
+    schema: jaffle_shop
     tables:
-      - name: dbt-fundamentals-441508.jaffle_shop.raw_jaffle_shop_customers
+      - name: customers
+        identifier: raw_jaffle_shop_customers
+      - name: orders
+        identifier: raw_jaffle_shop_orders
+  - name: stripe
+    schema: stripe
+    tables:
+      - name: payments
+        identifier: raw_stripe_payments  
