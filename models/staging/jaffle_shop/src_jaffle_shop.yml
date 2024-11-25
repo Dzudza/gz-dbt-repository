@@ -2,11 +2,17 @@ version: 2
 
 sources:
   - name: jaffle_shop
+    description: a clone of a Postgres application database
     schema: jaffle_shop
     tables:
       - name: customers
+        description: raw customers data
         identifier: raw_jaffle_shop_customers
+        columns:
+          - name: id #has to be original name of the column in the source not the renamed in stg
+            description: primary key of customers data
       - name: orders
+        description: raw orders data
         identifier: raw_jaffle_shop_orders
         #freshness: 
           #error_after:
