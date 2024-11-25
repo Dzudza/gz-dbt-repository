@@ -2,18 +2,23 @@ version: 2
 
 models:
   - name: stg_jaffle_shop__customers
+    description: one unique customer per row #at this stage section I am writing the documentation probably for a developer
     columns: 
       - name: customer_id
+        description: PK
         tests:
           - unique
           - not_null
   - name: stg_jaffle_shop__orders
+    description: one order per row
     columns:
       - name: order_id
+        description: primary key (PK)
         tests:
           - unique
           - not_null
       - name: status
+        description: "{{ doc('order_status')}}"
         tests:
           - accepted_values:
               values:
